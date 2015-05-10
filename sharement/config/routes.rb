@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index, :new, :create, :edit, :destroy]
 
+  resources :agreements, only: [:index, :new, :create, :edit, :destroy]
+
   #log in form
   get 'sessions/new' => 'sessions#new'
   # request to log in the user
