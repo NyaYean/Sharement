@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   end
   # resources :agreements, only: [:index, :new, :create, :edit, :destroy]
 
+  # resources :payments
+  
   #log in form
   get 'sessions/new' => 'sessions#new'
   # request to log in the user
