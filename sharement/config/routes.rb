@@ -2,9 +2,14 @@ Rails.application.routes.draw do
 
   root to: 'application#index'
 
-  resources :users, only: [:index, :new, :create, :edit, :destroy]
-
-  resources :agreements, only: [:index, :new, :create, :edit, :destroy]
+  resources :users do
+  	member do
+  		put 'add_agreement', as: :add_agreement
+  		put 'remove_agreement', as: :remove_agreement
+  		put 'edit_agreement', as: :edit_agreement
+  	end
+  end
+  # resources :agreements, only: [:index, :new, :create, :edit, :destroy]
 
   #log in form
   get 'sessions/new' => 'sessions#new'
