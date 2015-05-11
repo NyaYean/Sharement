@@ -37,6 +37,8 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.0)
+    backbars (0.0.11)
+      handlebars_assets
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -57,6 +59,11 @@ GEM
     execjs (2.5.2)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
+    handlebars_assets (0.19.1)
+      execjs (>= 1.2.9)
+      multi_json
+      sprockets (>= 2.0.3)
+      tilt
     httparty (0.13.3)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
@@ -81,6 +88,11 @@ GEM
     multi_xml (0.5.5)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
+    paypal-sdk-adaptiveaccounts (1.102.0)
+      paypal-sdk-core (~> 0.2.3)
+    paypal-sdk-core (0.2.10)
+      multi_json (~> 1.0)
+      xml-simple
     paypal-sdk-rest (1.2.0)
       multi_json (~> 1.0)
       uuidtools (~> 2.1)
@@ -162,12 +174,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  backbars
   bcrypt (~> 3.1.7)
   byebug
   coffee-rails (~> 4.1.0)
   httparty
   jbuilder (~> 2.0)
   jquery-rails
+  paypal-sdk-adaptiveaccounts
   paypal-sdk-rest
   pg
   pry-rails

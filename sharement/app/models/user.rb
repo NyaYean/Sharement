@@ -6,8 +6,6 @@ class User < ActiveRecord::Base
 
 	# def self.signIn(name)
 	# 	url = URI.encode(BASE_URL + name)
-	# end	
-
-
+	# end		
 end
 
