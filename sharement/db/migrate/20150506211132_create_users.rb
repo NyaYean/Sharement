@@ -9,7 +9,7 @@ class CreateUsers < ActiveRecord::Migration
     	t.string :city
     	t.string :state
     	t.integer :postal_code
-    	t.integer :phone_number
+    	t.string :phone_number
 
     	t.timestamps
     end
