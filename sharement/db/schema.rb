@@ -40,13 +40,9 @@ ActiveRecord::Schema.define(version: 20150506211414) do
     t.string   "city"
     t.string   "state"
     t.integer  "postal_code"
-    t.integer  "phone_number"
+    t.string   "phone_number"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "users_agreements", force: :cascade do |t|
-    t.integer "amount"
   end
 
 end

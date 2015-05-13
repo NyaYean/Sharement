@@ -1,28 +1,33 @@
 class AgreementsController < ApplicationController
 
 	def index
-		@agreements = Agreements.all
+		@agreements = Agreement.all
 		render :index
-
+	end
 	def show
 		@agreement = Agreement.find(params[:id])
 		render :show
 	end
 	def new
-		@users = Users.all
-		render :new
+		@agreement = Agreement.new
+		@users = User.all
 	end
 
 	def create
-		@agreement = Agreement.new(params.permit![:Agreement])
-
+		@agreement = Agreement.new(params.permit![:agreement])
+		@agreement.users.push(current_user)
 		if @agreement.save
-			redirect_to(agreement_path(@agreement))
+			redirect_to root_path
 
 		else
 			redirect_to(new_agreement_path)
 
 		end
+	end
+
+
+	def edit 
+		@agreement = Agreement.find(params[:id])
 	end
 
 	def update
@@ -37,7 +42,7 @@ class AgreementsController < ApplicationController
 	def destroy
 		@agreement = Agreement.find(params[:id])
 		@agreement.destroy
-		redirect_to(agreement_path)
+		redirect_to root_path
 	end
 
 end

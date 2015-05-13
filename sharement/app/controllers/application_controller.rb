@@ -4,12 +4,21 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   helper_method :current_user
+  helper_method :is_admin
 
 
   def index
+  	@user = User.find(session[:current_user])
   end
 
   def current_user
   	User.find_by(id: session[:current_user])
   end
+
+  def authenticate
+  	if !current_user
+  		redirect_to sessions_new_path unless current_user
+  	end
+  end
+
 end
