@@ -1,6 +1,5 @@
 <h2> Sign In </h2>
-<form role="form" class="form-horizontal">
-	<%= form_tag '/sessions' do %>
+	<%= form_tag('/sessions', method: "post") do %>
 
 		<%= label_tag :username %><br>
 		<%= text_field_tag :username%><br>
@@ -11,4 +10,3 @@
 		<%= submit_tag 'Log In',class: 'btn btn-success' %>
 		<%= link_to 'Sign Up', new_user_path, class: 'btn btn-success'%>
 	<% end %>
-</form>

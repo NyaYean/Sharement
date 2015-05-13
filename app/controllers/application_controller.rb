@@ -16,13 +16,11 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
-  	User.find_by(id: session[:current_user])
+  	User.find(session[:current_user]) if session([:current_user])
   end
 
   def authenticate
-  	if !current_user
-  		redirect_to sessions_new_path unless current_user
-  	end
+  		redirect_to sessions_new_path unless session[:current_user]
   end
 
 end
