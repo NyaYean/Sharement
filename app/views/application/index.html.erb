@@ -4,19 +4,26 @@
 		<% if current_user %>
 			<p>Welcome <%=current_user.username %> </p>
 			<%= link_to 'Edit Account', edit_user_path(current_user), class: 'btn btn-info btn-xs' %>
+			
+			
 			<%= link_to 'Log Out', sessions_path, method: :delete %>
-			<%= link_to 'New Agreement', new_agreement_path%>
-			<!-- binding.pry -->
 			<br>
 			<h2>List of agreements</h2>
+			<%= link_to 'New Agreement', new_agreement_path, class: 'btn btn-info btn-xs'%>
 			<% @user.agreements.each do |agreement| %>
-			<%= link_to 'Edit Agreement', edit_agreement_path(agreement)%>
-			<%= link_to 'Delete Agreement', agreement_path(agreement), method: :delete, data: {confirm: 'Are you sure you want to delete your agreement?'}%>
+			
+				<h6>Name</h6>
 				<p><%=agreement.name%></p>
+				<h6>Description</h6>
   			<p><%=agreement.description%></p>
+  			<h6>Start Date</h6>
   			<p><%=agreement.start_date%></p>
+  			<h6>Details</h6>
   			<p><%=agreement.agreement_details%></p>
+  			<h6>Friends</h6>
   			<p><%=agreement.payer%></p>
+  			<%= link_to 'Edit Agreement', edit_agreement_path(agreement), class: 'btn btn-info btn-xs' %>
+			<%= link_to 'Delete Agreement', agreement_path(agreement), method: :delete, class: 'btn btn-danger btn-xs' , data: {confirm: 'Are you sure you want to delete your agreement?'}%>
 
 			<%end%>
 

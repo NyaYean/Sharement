@@ -1,9 +1,15 @@
 <div id = 'agreement-show'>
 	
-	<span id='title'><%= @agreement.name %><br>
+	<span id='title'>
+		<h6>Name</h6>
+		<%= @agreement.name %>
+		<h6>Description</h6>
 		<%= @agreement.description %>
+		<h6>Start Date</h6>
 		<%= @agreement.start_date %>
+		<h6>Details</h6>
 		<%= @agreement.agreement_details %>
+		<h6>Friends</h6>
 		<%= @agreement.payer %>
 	</span>
 </div>

@@ -1,27 +1,29 @@
 <h1>Create New Agreement</h1>
 
-<div id="new-agreement">
-	<%= form_for @agreement do |f| %>
-		<%= f.label :name %>
-		<br>
-		<%= f.text_field :name %>
-		<br>
-		<%= f.label :description %>
-		<br>
-		<%= f.text_field :description %>
-		<br>
-		<%= f.label :start_date %>
-		<br>
-		<%= f.text_field :start_date %>
-		<br>
-		<%= f.label :agreement_details %>
-		<br>
-		<%= f.text_field :agreement_details %>
-		<br>
-		<%= f.label :payer %>
-		<br>
-		<%= f.text_field :payer %>
-		<br>
-		<%= f.submit %>
-	<% end %>
-</div>
+<form role="form">
+	<div class="form-group">
+		<%= form_for @agreement do |f| %>
+			<%= f.label :name %>
+			<br>
+			<%= f.text_field :name %>
+			<br>
+			<%= f.label :description %>
+			<br>
+			<%= f.text_field :description %>
+			<br>
+			<%= f.label :start_date %>
+			<br>
+			<%= f.text_field :start_date %>
+			<br>
+			<%= f.label :agreement_details %>
+			<br>
+			<%= f.text_field :agreement_details %>
+			<br>
+			<%= f.label :payer %>
+			<br>
+			<%= f.text_field :payer %>
+			<br>
+			<%= f.submit %>
+		<% end %>
+	</div>
+</form>

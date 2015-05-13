@@ -1,13 +1,14 @@
 <h2> Sign In </h2>
+<form role="form" class="form-horizontal">
+	<%= form_tag '/sessions' do %>
 
-<%= form_tag '/sessions' do %>
-
-	<%= label_tag :username %><br>
-	<%= text_field_tag :username%><br>
-	<br>
-	<%= label_tag :password %><br>
-	<%= password_field_tag :password %><br>
-	<br>
-	<%= submit_tag 'Log In' %>
-	<%= link_to 'Sign Up', new_user_path, class: 'btn btn-success'%>
-<% end %>
+		<%= label_tag :username %><br>
+		<%= text_field_tag :username%><br>
+		<br>
+		<%= label_tag :password %><br>
+		<%= password_field_tag :password %><br>
+		<br>
+		<%= submit_tag 'Log In',class: 'btn btn-success' %>
+		<%= link_to 'Sign Up', new_user_path, class: 'btn btn-success'%>
+	<% end %>
+</form>
