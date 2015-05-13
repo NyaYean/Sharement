@@ -8,7 +8,11 @@ class ApplicationController < ActionController::Base
 
 
   def index
+    if current_user
   	@user = User.find(session[:current_user])
+    else
+    
+    end
   end
 
   def current_user

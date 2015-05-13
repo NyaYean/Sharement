@@ -3,7 +3,7 @@
 <div id="top_menu">
 		<% if current_user %>
 			<p>Welcome <%=current_user.username %> </p>
-			<%= link_to 'Edit Account', edit_user_path(current_user) %>
+			<%= link_to 'Edit Account', edit_user_path(current_user), class: 'btn btn-info btn-xs' %>
 			<%= link_to 'Log Out', sessions_path, method: :delete %>
 			<%= link_to 'New Agreement', new_agreement_path%>
 			<!-- binding.pry -->
@@ -11,7 +11,7 @@
 			<h2>List of agreements</h2>
 			<% @user.agreements.each do |agreement| %>
 			<%= link_to 'Edit Agreement', edit_agreement_path(agreement)%>
-			<%= link_to 'Delete Agreement', agreement_path(agreement), method: :delete %>
+			<%= link_to 'Delete Agreement', agreement_path(agreement), method: :delete, data: {confirm: 'Are you sure you want to delete your agreement?'}%>
 				<p><%=agreement.name%></p>
   			<p><%=agreement.description%></p>
   			<p><%=agreement.start_date%></p>
@@ -22,6 +22,8 @@
 
 		<% else %>
 		<p>
+			<h2> An app that will assist you in creating a new agreement</h2>
+			<img src = "https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/handshake.png">
 			<%= link_to 'Sign Up', new_user_path %>
 			<%= link_to 'Log In', sessions_new_path %>
 		<p>
