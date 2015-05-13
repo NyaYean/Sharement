@@ -11,8 +11,8 @@ Rails.application.routes.draw do
       get 'agreements', as: :all_agreements
   	end
   end
-  resources :agreements, only: [:index, :new, :create, :edit, :destroy]
-
+  
+  resources :agreements
   # resources :payments
   
   #log in form

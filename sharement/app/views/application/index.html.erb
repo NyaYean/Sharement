@@ -1,2 +1,29 @@
-<h2>Welcome to Sharement</h2>
+<!-- <h2>Welcome to Sharement</h2> -->
 
+<div id="top_menu">
+		<% if current_user %>
+			<p>Welcome <%=current_user.username %> </p>
+			<%= link_to 'Edit Account', edit_user_path(current_user) %>
+			<%= link_to 'Log Out', sessions_path, method: :delete %>
+			<%= link_to 'New Agreement', new_agreement_path%>
+			<!-- binding.pry -->
+			<br>
+			<h2>List of agreements</h2>
+			<% @user.agreements.each do |agreement| %>
+			<%= link_to 'Edit Agreement', edit_agreement_path(agreement)%>
+			<%= link_to 'Delete Agreement', agreement_path(agreement), method: :delete %>
+				<p><%=agreement.name%></p>
+  			<p><%=agreement.description%></p>
+  			<p><%=agreement.start_date%></p>
+  			<p><%=agreement.agreement_details%></p>
+  			<p><%=agreement.payer%></p>
+
+			<%end%>
+
+		<% else %>
+		<p>
+			<%= link_to 'Sign Up', new_user_path %>
+			<%= link_to 'Log In', sessions_new_path %>
+		<p>
+		<% end %>
+</div>

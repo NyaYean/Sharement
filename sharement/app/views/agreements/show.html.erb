@@ -1,0 +1,11 @@
+<div id = 'agreement-show'>
+	
+	<span id='title'><%= @agreement.name %><br>
+		<%= @agreement.description %>
+		<%= @agreement.start_date %>
+		<%= @agreement.agreement_details %>
+		<%= @agreement.payer %>
+	</span>
+</div>
+
+<%= link_to 'Done', root_path %>

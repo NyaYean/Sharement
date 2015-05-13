@@ -45,8 +45,4 @@ ActiveRecord::Schema.define(version: 20150506211414) do
     t.datetime "updated_at"
   end
 
-  create_table "users_agreements", force: :cascade do |t|
-    t.integer "amount"
-  end
-
 end

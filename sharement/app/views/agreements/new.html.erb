@@ -1,6 +1,6 @@
 <h1>Create New Agreement</h1>
 
-<form action="<%= agreement_path %>" method="POST">
+<div id="new-agreement">
 	<%= form_for @agreement do |f| %>
 		<%= f.label :name %>
 		<br>
@@ -24,4 +24,4 @@
 		<br>
 		<%= f.submit %>
 	<% end %>
-</form>
+</div>
