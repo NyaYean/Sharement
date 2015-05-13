@@ -53,7 +53,9 @@ gem 'paypal-sdk-rest'
 
 gem 'paypal-sdk-adaptiveaccounts'
 
-gem 'backbars'
+gem 'twitter-bootstrap-rails'
+gem 'font-awesome-rails' 
+gem 'autoprefixer-rails'
 
 
 gem 'rails-assets-underscore', source: 'https://rails-assets.org'
