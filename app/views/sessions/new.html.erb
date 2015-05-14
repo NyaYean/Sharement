@@ -1,4 +1,5 @@
-<h2> Sign In </h2>
+<h2 align="center"> Sign In </h2>
+<div id = "session-box">
 	<%= form_tag('/sessions', method: "post") do %>
 
 		<%= label_tag :username %><br>
@@ -10,3 +11,4 @@
 		<%= submit_tag 'Log In',class: 'btn btn-success' %>
 		<%= link_to 'Sign Up', new_user_path, class: 'btn btn-success'%>
 	<% end %>
+</div>
