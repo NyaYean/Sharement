@@ -18,6 +18,11 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans);
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans|Crimson+Text);
 
+body {
+	/*background: #333;*/
+	text-align: center;
+}
+
 #landing {
 	font-family: 'Droid Sans', sans-serif;
 	display: block;
@@ -54,6 +59,30 @@ img {
 	margin: 10px auto;
 }
 
+#description{
+	font-family: 'Droid Sans', sans-serif;
+	display: block;
+	width: 200px;
+	height: auto;
+	padding: 20px;
+	margin: 10px auto;
+	color: black;
+}
+
+#new_user_form{
+	text-align: center;
+	background: #333;
+
+} 
+
+#edit_form {
+color: white;
+background: #333;
+}
+
+h1 {
+	color: black;
+}
 
 
 /*#user-show {

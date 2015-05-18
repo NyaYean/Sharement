@@ -1,40 +1,42 @@
-<%= form_for @user do |f| %>
-	<%= f.label :username %>
-	<br>
-	<%= f.text_field :username %>
-	<br>
-	<%= f.label :first_name %>
-	<br>
-	<%= f.text_field :first_name %>
-	<br>
-	<%= f.label :last_name %>
-	<br>
-	<%= f.text_field :last_name %>
-	<br>
-	<%= f.label :password %>
-	<br>
-	<%= f.password_field :password %>
-	<br>
-	<%= f.label :address %>
-	<br>
-	<%= f.text_field :address %>
-	<br>
-	<%= f.label :city %>
-	<br>
-	<%= f.text_field :city %>
-	<br>
-	<%= f.label :state %>
-	<br>
-	<%= f.text_field :state %>
-	<br>
-	<%= f.label :postal_code %>
-	<br>
-	<%= f.text_field :postal_code %>
-	<br>
-	<%= f.label :phone_number %>
-	<br>
-	<%= f.text_field :phone_number %>
-	<br>
-	<%= f.submit %>
+<div id= "new_user_form">
+	<%= form_for @user do |f| %>
+		<%= f.label :username %>
+		<br>
+		<%= f.text_field :username %>
+		<br>
+		<%= f.label :first_name %>
+		<br>
+		<%= f.text_field :first_name %>
+		<br>
+		<%= f.label :last_name %>
+		<br>
+		<%= f.text_field :last_name %>
+		<br>
+		<%= f.label :password %>
+		<br>
+		<%= f.password_field :password %>
+		<br>
+		<%= f.label :address %>
+		<br>
+		<%= f.text_field :address %>
+		<br>
+		<%= f.label :city %>
+		<br>
+		<%= f.text_field :city %>
+		<br>
+		<%= f.label :state %>
+		<br>
+		<%= f.text_field :state %>
+		<br>
+		<%= f.label :postal_code %>
+		<br>
+		<%= f.text_field :postal_code %>
+		<br>
+		<%= f.label :phone_number %>
+		<br>
+		<%= f.text_field :phone_number %>
+		<br>
+		<%= f.submit %>
 
-<% end %>
+	<% end %>
+</div>

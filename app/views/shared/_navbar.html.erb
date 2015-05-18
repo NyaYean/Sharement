@@ -1,0 +1,22 @@
+<ul id="nav">
+
+	<% if current_user %>
+	<li class="<%= 'active' if current_page?(root_path || sessions_new_path || new_user_path)%>"><%= link_to "Home", user_path(session[:current_user]), :class => 'home' %></li>
+	<% else %>
+	<span class='welcome'>Welcome</span>
+	<% end %>
+
+	<% if current_user %>
+	<li class="<%= 'active' if current_page?(root_path || sessions_new_path || new_user_path) %>"><%= link_to "Agreements", agreement_path %></li>
+	<% end %>
+
+
+	<% if current_user %>
+	<li class="<%= 'active' if current_page?(root_path || sessions_new_path || new_user_path) %>"><%= link_to 'Log Me Out', sessions_path, method: :delete, :class => 'log-out' %></li>
+	<% end %>
+</ul>
+
+
+
+
+
