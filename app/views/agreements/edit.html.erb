@@ -1,24 +1,28 @@
-<%= form_for @agreement do |f| %>
-	<%= f.label :name %>
-	<br>
-	<%= f.text_field :name %>
-	<br>
-	<%= f.label :description %>
-	<br>
-	<%= f.text_field :description %>
-	<br>
-	<%= f.label :start_date %>
-	<br>
-	<%= f.text_field :start_date %>
-	<br>
-	<%= f.label :agreement_details %>
-	<br>
-	<%= f.text_field :agreement_details %>
-	<br>
-	<%= f.label :payer %>
-	<br>
-	<%= f.text_field :payer %>
-	<br>
-	<%= f.submit %>
-
-<% end %>
+<h1>Edit Agreement</h1>
+	
+		<%= form_for @agreement do |f| %>
+		<div id = "edit_form">
+			<%= f.label :name %>
+			<br>
+			<%= f.text_field :name %>
+			<br>
+			<%= f.label :description %>
+			<br>
+			<%= f.text_field :description %>
+			<br>
+			<%= f.label :start_date %>
+			<br>
+			<%= f.text_field :start_date %>
+			<br>
+			<%= f.label :agreement_details %>
+			<br>
+			<%= f.text_field :agreement_details %>
+			<br>
+			<%= f.label :payer %>
+			<br>
+			<%= f.text_field :payer %>
+			<br>
+			<%= f.submit %>
+		</div>
+		<% end %>
+	
