@@ -62,25 +62,22 @@ img {
 	padding-left: 36px
 }
 
-#description{
-	font-family: 'Droid Sans', sans-serif;
-	display: block;
-	width: 200px;
-	height: auto;
-	padding: 20px;
-	margin: 10px auto;
-	color: black;
+.navbar-brand {
+	color: white;
 }
 
 #new_user_form{
 	text-align: center;
-	background: #333;
+	margin-top: 32px;
 
 } 
-
+#form-group {
+	text-align: center;
+	margin-top: 50px;
+}
 #edit_form {
 color: white;
-background: #333;
+margin-top: 32px
 }
 
 h1 {
@@ -94,6 +91,10 @@ h1 {
 .navbar  {
 	background-color: rgb(103,118,133);
 	border-color: white;
+}
+
+#welcome-landing {
+	margin-top: 56px;
 }
 /*#user-show {
 	display: block;
