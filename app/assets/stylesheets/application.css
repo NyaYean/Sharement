@@ -18,9 +18,11 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans);
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans|Crimson+Text);
 
+
 body {
 	/*background: #333;*/
-	text-align: center;
+	
+	background-color: rgb(161,166,171);
 }
 
 #landing {
@@ -57,6 +59,7 @@ img {
 	height: 140px;
 	padding: 20px;
 	margin: 10px auto;
+	padding-left: 36px
 }
 
 #description{
@@ -84,7 +87,14 @@ h1 {
 	color: black;
 }
 
+.navbar-brand {
+	color: white;
+}
 
+.navbar  {
+	background-color: rgb(103,118,133);
+	border-color: white;
+}
 /*#user-show {
 	display: block;
 	width: 200px;
