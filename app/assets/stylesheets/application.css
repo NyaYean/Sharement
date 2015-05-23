@@ -25,6 +25,13 @@ body {
 	background-color: rgb(161,166,171);
 }
 
+.navbar-default
+.navbar-brand {
+	color: rgb(204,177,163);
+}
+.navbar-default .navbar-nav>li>a {
+	color: rgb(204,177,163);
+}
 #landing {
 	font-family: 'Droid Sans', sans-serif;
 	display: block;
@@ -40,6 +47,7 @@ body {
 	height: auto;
 	padding: 20px;
 	margin: 10px auto;
+	text-align: center;
 }
 
 h6 {
@@ -76,8 +84,12 @@ img {
 	margin-top: 50px;
 }
 #edit_form {
-color: white;
-margin-top: 32px
+color: black;
+margin-top: 53px
+}
+#agreement-show {
+	text-align: center;
+
 }
 
 h1 {

@@ -6,11 +6,12 @@
 			<h2>Welcome <%=current_user.username %> </h2>
 			
 		</div>
-			
-			<% @user.agreements.each do |agreement| %>
+			<%= link_to 'New Agreement', new_agreement_path, class: 'btn btn-info btn-xs'%>
 			<div id= "user-landing">
-				<h2>List of agreements</h2>
-				<%= link_to 'New Agreement', new_agreement_path, class: 'btn btn-info btn-xs'%>
+				<h2>List of Agreements</h2>
+			<% @user.agreements.each do |agreement| %>
+			
+				
 				<h5>Name</h5>
 				<p><%=agreement.name%></p>
 				<h5>Description</h5>
