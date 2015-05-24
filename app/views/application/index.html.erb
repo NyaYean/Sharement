@@ -39,7 +39,9 @@
 		<div id= "landing">
 			<h1> Sharement </h1>
 			<img src = "https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/handshake.png">
-			<%= link_to 'Sign Up', new_user_path %>
-			<%= link_to 'Log In', sessions_new_path %>
+			<div id="mini-nav">
+				<%= link_to 'Sign Up', new_user_path %>
+				<%= link_to 'Log In', sessions_new_path %>
+			</div>
 		</div>
 		<% end %>

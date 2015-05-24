@@ -25,6 +25,16 @@ body {
 	background-color: rgb(161,166,171);
 }
 
+#mini-nav{
+	display: block;
+	width: 200px;
+	height: auto;
+	padding: 20px;
+	margin: 10px auto;
+	text-align: center;
+
+}
+
 .navbar-default
 .navbar-brand {
 	color: rgb(204,177,163);
